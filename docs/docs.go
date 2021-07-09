@@ -19,19 +19,98 @@ var doc = `{
         "description": "{{.Description}}",
         "title": "{{.Title}}",
         "contact": {
-            "name": "Antonio Paya Gonzalez",
-            "url": "http://antoniopg.tk",
-            "email": "antonioalfa22@gmail.com"
+            "name": "Earl Perez",
+            "url": "http://earlperez.me",
+            "email": "ebcp.dev@gmail.com"
         },
         "license": {
             "name": "MIT",
-            "url": "https://github.com/antonioalfa22/go-rest-template/blob/master/LICENSE"
+            "url": "https://github.com/ebcp-dev/go-rest-sm/blob/master/LICENSE"
         },
         "version": "{{.Version}}"
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
+        "/api/tasks": {
+            "get": {
+                "security": [
+                    {
+                        "Authorization Token": []
+                    }
+                ],
+                "description": "Get Tasks",
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Retrieves tasks based on query",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Taskname",
+                        "name": "taskname",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Firstname",
+                        "name": "firstname",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Lastname",
+                        "name": "lastname",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/tasks.Task"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/tasks/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "Authorization Token": []
+                    }
+                ],
+                "description": "get Task by ID",
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Retrieves task based on given ID",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Task ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/tasks.Task"
+                        }
+                    }
+                }
+            }
+        },
         "/api/users": {
             "get": {
                 "security": [
@@ -113,6 +192,32 @@ var doc = `{
         }
     },
     "definitions": {
+        "tasks.Task": {
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                },
+                "user": {
+                    "$ref": "#/definitions/users.User"
+                },
+                "user_id": {
+                    "type": "integer"
+                }
+            }
+        },
         "users.User": {
             "type": "object",
             "properties": {
@@ -132,7 +237,6 @@ var doc = `{
                     "type": "string"
                 },
                 "role": {
-                    "type": "object",
                     "$ref": "#/definitions/users.UserRole"
                 },
                 "updated_at": {

@@ -2,11 +2,12 @@ package test
 
 import (
 	"fmt"
-	"github.com/antonioalfa22/go-rest-template/internal/pkg/config"
-	"github.com/antonioalfa22/go-rest-template/internal/pkg/db"
-	models "github.com/antonioalfa22/go-rest-template/internal/pkg/models/users"
-	"github.com/antonioalfa22/go-rest-template/internal/pkg/persistence"
 	"testing"
+
+	"github.com/ebcp-dev/go-rest-sm/internal/pkg/config"
+	"github.com/ebcp-dev/go-rest-sm/internal/pkg/db"
+	models "github.com/ebcp-dev/go-rest-sm/internal/pkg/models/users"
+	"github.com/ebcp-dev/go-rest-sm/internal/pkg/persistence"
 )
 
 var userTest models.User
@@ -20,9 +21,9 @@ func Setup() {
 func TestAddUser(t *testing.T) {
 	Setup()
 	user := models.User{
-		Firstname: "Antonio",
-		Lastname:  "Paya",
-		Username:  "antonio",
+		Firstname: "Earl",
+		Lastname:  "Perez",
+		Username:  "ebcperez",
 		Hash:      "hash",
 		Role:      models.UserRole{RoleName: "user"},
 	}

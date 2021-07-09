@@ -2,14 +2,15 @@ package db
 
 import (
 	"fmt"
-	"github.com/antonioalfa22/go-rest-template/internal/pkg/config"
-	"github.com/antonioalfa22/go-rest-template/internal/pkg/models/tasks"
-	"github.com/antonioalfa22/go-rest-template/internal/pkg/models/users"
+	"time"
+
+	"github.com/ebcp-dev/go-rest-sm/internal/pkg/config"
+	"github.com/ebcp-dev/go-rest-sm/internal/pkg/models/tasks"
+	"github.com/ebcp-dev/go-rest-sm/internal/pkg/models/users"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-	"time"
 )
 
 var (

@@ -1,13 +1,14 @@
 package persistence
 
 import (
-	"github.com/antonioalfa22/go-rest-template/internal/pkg/db"
-	models "github.com/antonioalfa22/go-rest-template/internal/pkg/models/users"
 	"strconv"
+
+	"github.com/ebcp-dev/go-rest-sm/internal/pkg/db"
+	models "github.com/ebcp-dev/go-rest-sm/internal/pkg/models/users"
 )
 
-
 type UserRepository struct{}
+
 var userRepository *UserRepository
 
 func GetUserRepository() *UserRepository {

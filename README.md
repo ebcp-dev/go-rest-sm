@@ -1,9 +1,7 @@
-# go-rest-template
-Go (Golang) API REST Template/Boilerplate with Gin Framework
+# go-rest-sm
+Go (Golang) API REST with Gin Framework
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/antonioalfa22/go-rest-template)](https://goreportcard.com/report/github.com/antonioalfa22/go-rest-template)
-[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-[![Build Status](https://travis-ci.com/antonioalfa22/go-rest-template.svg?branch=master)](https://travis-ci.com/antonioalfa22/go-rest-template)
+[![Build Status](https://travis-ci.com/ebcp-dev/go-rest-sm.svg?branch=master)](https://travis-ci.com/ebcp-dev/go-rest-sm)
 
 
 ## 1. Run with Docker
@@ -36,6 +34,7 @@ _______
 go get -u github.com/swaggo/swag/cmd/swag
 
 # Generate docs
+export PATH=$(go env GOPATH)/bin:$PATH
 swag init --dir cmd/api --parseDependency --output docs
 ```
 

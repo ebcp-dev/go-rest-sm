@@ -1,0 +1,6 @@
+::1 - - [08/Jul/2021:23:48:52 -0700] "GET / HTTP/1.1 404 130.819µs " " Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" " "
+::1 - - [08/Jul/2021:23:49:01 -0700] "GET /api/users HTTP/1.1 404 6.523756ms " " Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" " "
+::1 - - [08/Jul/2021:23:49:20 -0700] "GET /api/taks HTTP/1.1 404 57.131µs " " Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" " "
+::1 - - [08/Jul/2021:23:49:22 -0700] "GET /api/tasks HTTP/1.1 404 4.83339ms " " Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" " "
+::1 - - [08/Jul/2021:23:49:27 -0700] "GET /api/users HTTP/1.1 404 4.917586ms " " Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" " "
+127.0.0.1 - - [08/Jul/2021:23:49:40 -0700] "GET /api/users HTTP/1.1 404 5.940988ms " " Thunder Client (https://www.thunderclient.io)" " "

@@ -2,13 +2,14 @@ package router
 
 import (
 	"fmt"
-	"github.com/antonioalfa22/go-rest-template/internal/api/controllers"
-	"github.com/antonioalfa22/go-rest-template/internal/api/middlewares"
-	"github.com/gin-gonic/gin"
-	swaggerFiles "github.com/swaggo/files"
-	"github.com/swaggo/gin-swagger"
 	"io"
 	"os"
+
+	"github.com/ebcp-dev/go-rest-sm/internal/api/controllers"
+	"github.com/ebcp-dev/go-rest-sm/internal/api/middlewares"
+	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func Setup() *gin.Engine {

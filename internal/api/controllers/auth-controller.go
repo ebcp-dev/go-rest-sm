@@ -2,12 +2,13 @@ package controllers
 
 import (
 	"errors"
-	"github.com/antonioalfa22/go-rest-template/internal/pkg/persistence"
-	"github.com/antonioalfa22/go-rest-template/pkg/crypto"
-	"github.com/antonioalfa22/go-rest-template/pkg/http-err"
-	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
+
+	"github.com/ebcp-dev/go-rest-sm/internal/pkg/persistence"
+	"github.com/ebcp-dev/go-rest-sm/pkg/crypto"
+	http_err "github.com/ebcp-dev/go-rest-sm/pkg/http-err"
+	"github.com/gin-gonic/gin"
 )
 
 type LoginInput struct {

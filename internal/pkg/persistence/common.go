@@ -1,7 +1,7 @@
 package persistence
 
 import (
-	"github.com/antonioalfa22/go-rest-template/internal/pkg/db"
+	"github.com/ebcp-dev/go-rest-sm/internal/pkg/db"
 	"github.com/jinzhu/gorm"
 )
 
